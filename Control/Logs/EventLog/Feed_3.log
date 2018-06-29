@@ -1,0 +1,25 @@
+Running Feeder 3
+20 / 12 / 2017
+16 : 2 : 0.005
+Running Feed Setup
+Feed_ID = 3
+
+Code = 
+
+    '0016530D6831'
+
+Establishing A Connection
+    'The Speed is'    '60'
+
+Retrieving Feed Schedule Data
+    'The Buffer Number is '    '4'
+
+Setting Up Running variables
+Elapsed time is 2.093164 seconds.
+Finished Setting Up Running variables
+Elapsed time is 2.093201 seconds.
+Beginning Physical Initialisations
+Elapsed time is 2.093216 seconds.
+Initialising Sensors
+Initialising Motor B (Lifter Motor)
+Elapsed time is 2.159935 seconds.

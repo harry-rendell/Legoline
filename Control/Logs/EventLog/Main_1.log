@@ -1,0 +1,14 @@
+Running Mainline 1
+20 / 12 / 2017
+16 : 2 : 26.255
+Performing Mainline Setup
+Beginning to read File Data
+Elapsed time is 0.000011 seconds.
+Found Code:
+
+Code = 
+
+    '0016530EE594'
+
+Running Open Link Script to Open a Connection
+No NXT found that matches your parameters (MAC address or NXT's name)! Please check the constraints. (Rebooting your NXT might help!)

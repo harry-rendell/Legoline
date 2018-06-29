@@ -1,0 +1,13 @@
+Code\Common Resourecs\Splitter Cases
+Code\Local Controls
+Controls\config.txt
+Controls\config_master.txt
+
+We have Code\GUI\Legoline_User_Interface()
+and it has two call back methods for two types of experiments:
+Feed_Rate_Experiment_Callback
+Pallet_Buffer_Experiment_Callback
+it also automatically greys out button based on data file but I do not need to worry about that for  now
+what those two fuctions do are simply invoking Feed_Rate_Experiment.m and Pallet_Buffer_Experiment.m
+These two methods invoke the initialise, start, finish.
+initialise open up all the matlab instances

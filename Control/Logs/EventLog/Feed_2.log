@@ -1,0 +1,26 @@
+Running Feeder 2
+20 / 12 / 2017
+16 : 2 : 13.446
+Running Feed Setup
+Feed_ID = 2
+
+Code = 
+
+    '001653118A50'
+
+Establishing A Connection
+    'The Speed is'    '60'
+
+Retrieving Feed Schedule Data
+    'The Buffer Number is '    '4'
+
+Setting Up Running variables
+Elapsed time is 2.575035 seconds.
+Finished Setting Up Running variables
+Elapsed time is 2.575070 seconds.
+Beginning Physical Initialisations
+Elapsed time is 2.575085 seconds.
+Initialising Sensors
+Initialising Motor B (Lifter Motor)
+Elapsed time is 2.729723 seconds.
+ERROR:The Lift Sensor Has Failed to Initialise Properly and May Cause Damage
