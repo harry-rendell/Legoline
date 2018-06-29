@@ -1,5 +1,5 @@
 disp('Running Transfer1');
-path2code = pwd;
+path2code = pwd; %Identify working directory
 path2code = path2code(1: length(path2code) - 13);
 cd(path2code);
 
@@ -8,18 +8,18 @@ fileInit = memmapfile('InitializationStatus.txt', 'Writable', true, 'Format', 'i
 fileInit.Data(4) = 49;
 fileJunc1 = memmapfile('Junction1.txt', 'Writable', true);
 fileJunc2 = memmapfile('Junction2.txt', 'Writable', true);
-fileConfig = fopen('Configurations.txt', 'rt');
+fileConfig = fopen('Configurations.txt', 'rt'); 
 out = textscan(fileConfig, '%s %s');
 fclose(fileConfig);
 ind = strmatch('Transfer1', out{1}, 'exact');
 
 %% Open NXT and wait for the ready sign
-nxtT1Addr = char(out{2}(ind));
-nxtT1 = COM_OpenNXTEx('USB', nxtT1Addr);
-OpenLight(SENSOR_3, 'ACTIVE', nxtT1);
+nxtT1Addr = char(out{2}(ind)); %Identify address of NXT Transfer1
+nxtT1 = COM_OpenNXTEx('USB', nxtT1Addr); %Establish connection
+OpenLight(SENSOR_3, 'ACTIVE', nxtT1); %turn on sensors
 OpenSwitch(SENSOR_2, nxtT1);
-OpenLight(SENSOR_1, 'ACTIVE', nxtT1);
-resetTransferArm(MOTOR_B, SENSOR_2, nxtT1, 15);
+OpenLight(SENSOR_1, 'ACTIVE', nxtT1); 
+resetTransferArm(MOTOR_B, SENSOR_2, nxtT1, 15); %Calibrate arm, set angle to 15deg from touch sensor
 fileInit.Data(4) = 50;
 while fileInit.Data(1) == 48
     pause(0.25);
@@ -46,7 +46,7 @@ end
 disp('Started!');
 currentLight1 = GetLight(SENSOR_1, nxtT1);
 currentLight3 = GetLight(SENSOR_3, nxtT1);
-cd([pwd filesep 'Local_Control']);%CRUCIAL
+cd([pwd filesep 'Local_Control']); %CRUCIAL
 clearPalletT = [timer('TimerFcn', 'fileJunc2.Data(1) = fileJunc2.Data(1) - 1', 'StartDelay', 3.3);
                 timer('TimerFcn', 'fileJunc2.Data(1) = fileJunc2.Data(1) - 1', 'StartDelay', 3.3);
                 timer('TimerFcn', 'fileJunc2.Data(1) = fileJunc2.Data(1) - 1', 'StartDelay', 3.3);
